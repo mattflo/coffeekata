@@ -1,5 +1,8 @@
 guard :shell do
   watch /.*/ do |m|
-  	n `jasmine-node *.spec.coffee --coffee --verbose`
+  	result = `jasmine-node *.spec.coffee --coffee --verbose --nocolor`
+  	puts result
+  	n result.gsub /(\n)+/,' '
   end
 end
+
