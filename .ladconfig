@@ -1,3 +1,4 @@
 ignore:
 - .jar
-token: '__NAME__'
+token: 
+- __NAME__
